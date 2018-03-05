@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @todo.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @todo.description %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= image_tag (@todo.photo)%>
+</p>
+
+<p>
+  <strong>Completado?</strong>
+  <% if @todo.done == true %>
+    <p>Completado!</p>
+  <% else %>
+    <p>Sin completar :(</p>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_todo_path(@todo) %> |
+<%= link_to 'Back', todos_path %>
